@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="scroll">
+        <div class="news">
+        
+        <div class="news1">ブログアップデート情報 → </div>
+        <div class="news2">2020/06/07：<a href="リンクのURL">新着記事の変更完了</a></div>
+        <div class="news3">2020/06/06：ブログトップ画像変更</div>
+        <div class="news4">2020/06/05：ブログデザイン変更</div>
+        
+        </div>
+        </div>
+
+        <div id="sampleBox">
+            <p id="sampleText">
+                <br />この<br />ボックス<br />要素<br />を<br />自動的<br />に<br />最後<br />まで<br />スクロール<br />します。
+            </p>
+        </div>
+        
+        <script type="text/javascript">
+            window.onload = function () {
+                autoScroll();
+            }
+            var $scrollY = 0;
+            function autoScroll() {
+                var $sampleBox = document.getElementById( "sampleBox" );
+                $sampleBox.scrollTop = ++$scrollY;
+                if( $scrollY < $sampleBox.scrollHeight - $sampleBox.clientHeight ){
+                    setTimeout( "autoScroll()", 20 );
+                }else{
+                    $scrollY = 0;
+                    $sampleBox.scrollTop = 0;
+                    setTimeout( "autoScroll()", 20 );
+                }
+            }
+            </script>
+
+
+<div class="scroll">
+<div class="news">
+
+<div class="news1">ブログアップデート情報 → </div>
+<div class="news2">2020/06/07：<a href="リンクのURL">新着記事の変更完了</a></div>
+<div class="news3">2020/06/06：ブログトップ画像変更</div>
+<div class="news4">2020/06/05：ブログデザイン変更</div>
+
+</div>
+</div>
+
+
+</body>
+</html>
